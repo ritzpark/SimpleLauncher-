@@ -3,10 +3,10 @@ name: Android CI
 on:
   push:
     branches:
-      - main  # Replace with your default branch if different
+      - main  # Change 'master' to 'main' or your branch name
   pull_request:
     branches:
-      - main  # Replace with your default branch if different
+      - main  # Change 'master' to 'main' or your branch name
   workflow_dispatch:  # Allows manual triggering
 
 jobs:
