@@ -3,10 +3,11 @@ name: Android CI
 on:
   push:
     branches:
-      - master
+      - main  # Replace with your default branch if different
   pull_request:
     branches:
-      - master
+      - main  # Replace with your default branch if different
+  workflow_dispatch:  # Allows manual triggering
 
 jobs:
   build:
@@ -33,6 +34,9 @@ jobs:
 
     - name: Build with Gradle
       run: ./gradlew assembleRelease
+
+    - name: Run tests
+      run: ./gradlew test  # Optional: Run tests if you have them
 
     - name: Upload APK
       uses: actions/upload-artifact@v3
